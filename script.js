@@ -5,23 +5,23 @@ let computerPlay = function() {
 }
 
 let playRound = function(playerSelection, computerSelection) {
-    if ('rock', 'scissors') {
+    if (playerSelection == 'rock' && computerSelection == 'scissors') {
         return 'You Win! Rock beats Scissors!'
-    } else if ('rock', 'paper') {
+    } else if (playerSelection == 'rock' && computerSelection ==  'paper') {
         return 'You Lose! Paper beats Rock!';
-    } else if ('paper', 'rock') {
+    } else if (playerSelection == 'paper' && computerSelection ==   'rock') {
         return 'You Win! Paper beats Rock!';
-    } else if ('paper', 'scissors') {
+    } else if (playerSelection == 'paper' && computerSelection ==   'scissors') {
         return 'You Lose! Scissors beats Paper!';
-    } else if ('scissors', 'paper') {
+    } else if (playerSelection == 'scissors' && computerSelection ==   'paper') {
         return 'You Win! Scissors beats Paper!';
-    } else if ('scissors', 'rock') {
+    } else if (playerSelection == 'scissors' && computerSelection ==   'rock') {
         return 'You Lose! Rock beats Scissors!';
     } else {
         return 'Let\'s Play!'
     }
 }
 
-const playerSelection = 'rock';
+const playerSelection = 'scissors';
 const computerSelection = computerPlay();
-// console.log(playRound(playerSelection, computerSelection));
+console.log(playRound(playerSelection, computerSelection));
