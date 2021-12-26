@@ -34,7 +34,8 @@ let game = function() {
     return result;
 };
 
-const playerSelection = 'paper';
+const typedPlayerSelection = 'PaPer';
+const playerSelection = typedPlayerSelection.toLowerCase();
 const computerSelection = computerPlay();
 console.log(playRound(playerSelection, computerSelection));
 console.log(game());
