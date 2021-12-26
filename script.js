@@ -19,14 +19,10 @@ let playRound = function(playerSelection, computerSelection) {
         return 'You Lose! Rock beats Scissors!';
     } else if (playerSelection == ' ' && computerSelection == 'rock' || 'paper' || 'scissors') {
         return 'Let\'s Play';
-    } else if (playerSelection == 'scissors' && computerSelection == 'scissors') {
-        return 'Draw!'
-    } else if (playerSelection == 'rock' && computerSelection == 'rock') {
-        return 'Draw!'
-    } else if (playerSelection == 'paper' && computerSelection == 'paper') {
+    } else if (playerSelection ===  computerSelection) {
         return 'Draw!'
     }
-};
+ };
 
 let game = function() {
     let result;
@@ -37,5 +33,7 @@ let game = function() {
 const typedPlayerSelection = 'PaPer';
 const playerSelection = typedPlayerSelection.toLowerCase();
 const computerSelection = computerPlay();
+const playerScore = 0;
+const compScore = 0;
 console.log(playRound(playerSelection, computerSelection));
 console.log(game());
