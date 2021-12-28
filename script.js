@@ -1,9 +1,22 @@
+
+//function where computer returns random option rock, paper, scissors
 let computerPlay = function() {
     let options = [['rock'], ['paper'], ['scissors']]
     let random = options[Math.floor(Math.random()*options.length)];
     return random;
 };
 
+// variables
+const typedPlayerSelection = 'rock';
+const playerSelection = typedPlayerSelection.toLowerCase();
+const computerSelection = computerPlay();
+const playerWin = 'You Win!';
+const compWin = 'You Lose!'
+let playerScore = 0;
+let compScore = 0;
+
+
+//plays one round of rock paper scissors, outputs who wins
 let playRound = function(playerSelection, computerSelection) {
     if (playerSelection == 'rock' && computerSelection == 'scissors') {
         return `${playerWin} Rock beats Scissors!`;
@@ -22,19 +35,19 @@ let playRound = function(playerSelection, computerSelection) {
     } else if (playerSelection ===  computerSelection) {
         return 'Draw!'
     }
+    /*
+    if (`${playerWin}`) {
+        return playerScore++;            //code for decoration
+    } else if (`${compWin}`) {
+        return compScore++;
+    } */
  };
 
-let game = function() {
-    result = playRound(playerSelection, computerSelection);
+ //function to play the game 5 times
+const game = function() {
+    console.log(playRound(playerSelection, computerSelection));
     
+  
 };
 
-const typedPlayerSelection = 'PaPer';
-const playerSelection = typedPlayerSelection.toLowerCase();
-const computerSelection = computerPlay();
-const playerWin = 'You Win!';
-const compWin = 'You Lose!'
-const playerScore = 0;
-const compScore = 0;
-console.log(playRound(playerSelection, computerSelection));
-console.log(game());
+game();
