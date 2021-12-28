@@ -21,15 +21,15 @@ let playRound = function(playerSelection, computerSelection) {
     if (playerSelection == 'rock' && computerSelection == 'scissors') {
         return `${playerWin} Rock beats Scissors!` + ` Player Score: ${playerScore} `;
     } else if (playerSelection == 'rock' && computerSelection == 'paper') {
-        return `${compWin} Paper beats Rock!`;
+        return `${compWin} Paper beats Rock!` + ` Computer Score: ${compScore} `;
     } else if (playerSelection == 'paper' && computerSelection == 'rock') {
         return `${playerWin} Paper beats Rock!` + ` Player Score: ${playerScore} `;
     } else if (playerSelection == 'paper' && computerSelection == 'scissors') {
-        return `${compWin} Scissors beats Paper!`;
+        return `${compWin} Scissors beats Paper!` + ` Computer Score: ${compScore} `;
     } else if (playerSelection == 'scissors' && computerSelection == 'paper') {
         return `${playerWin} Scissors beats Paper!` + ` Player Score: ${playerScore} `;
     } else if (playerSelection == 'scissors' && computerSelection == 'rock') {
-        return `${compWin} Rock beats Scissors!`;
+        return `${compWin} Rock beats Scissors!` + ` Computer Score: ${compScore} `;
     } else if (playerSelection == ' ' && computerSelection == 'rock' || 'paper' || 'scissors') {
         return 'Let\'s Play';
     } else if (playerSelection ===  computerSelection) {
