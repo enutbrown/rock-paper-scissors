@@ -6,17 +6,17 @@ let computerPlay = function() {
 
 let playRound = function(playerSelection, computerSelection) {
     if (playerSelection == 'rock' && computerSelection == 'scissors') {
-        return 'You Win! Rock beats Scissors!';
+        return `${playerWin} Rock beats Scissors!`;
     } else if (playerSelection == 'rock' && computerSelection == 'paper') {
-        return 'You Lose! Paper beats Rock!';
+        return `${compWin} Paper beats Rock!`;
     } else if (playerSelection == 'paper' && computerSelection == 'rock') {
-        return 'You Win! Paper beats Rock!';
+        return `${playerWin} Paper beats Rock!`;
     } else if (playerSelection == 'paper' && computerSelection == 'scissors') {
-        return 'You Lose! Scissors beats Paper!';
+        return `${compWin} Scissors beats Paper!`;
     } else if (playerSelection == 'scissors' && computerSelection == 'paper') {
-        return 'You Win! Scissors beats Paper!';
+        return `${playerWin} Scissors beats Paper!`;
     } else if (playerSelection == 'scissors' && computerSelection == 'rock') {
-        return 'You Lose! Rock beats Scissors!';
+        return `${compWin} Rock beats Scissors!`;
     } else if (playerSelection == ' ' && computerSelection == 'rock' || 'paper' || 'scissors') {
         return 'Let\'s Play';
     } else if (playerSelection ===  computerSelection) {
@@ -25,14 +25,15 @@ let playRound = function(playerSelection, computerSelection) {
  };
 
 let game = function() {
-    let result;
     result = playRound(playerSelection, computerSelection);
-    return result;
+    
 };
 
 const typedPlayerSelection = 'PaPer';
 const playerSelection = typedPlayerSelection.toLowerCase();
 const computerSelection = computerPlay();
+const playerWin = 'You Win!';
+const compWin = 'You Lose!'
 const playerScore = 0;
 const compScore = 0;
 console.log(playRound(playerSelection, computerSelection));
