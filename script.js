@@ -19,15 +19,15 @@ let compScore = 0;
 //plays one round of rock paper scissors, outputs who wins
 let playRound = function(playerSelection, computerSelection) {
     if (playerSelection == 'rock' && computerSelection == 'scissors') {
-        return `${playerWin} Rock beats Scissors!`;
+        return `${playerWin} Rock beats Scissors!` + ` Player Score: ${playerScore} `;
     } else if (playerSelection == 'rock' && computerSelection == 'paper') {
         return `${compWin} Paper beats Rock!`;
     } else if (playerSelection == 'paper' && computerSelection == 'rock') {
-        return `${playerWin} Paper beats Rock!`;
+        return `${playerWin} Paper beats Rock!` + ` Player Score: ${playerScore} `;
     } else if (playerSelection == 'paper' && computerSelection == 'scissors') {
         return `${compWin} Scissors beats Paper!`;
     } else if (playerSelection == 'scissors' && computerSelection == 'paper') {
-        return `${playerWin} Scissors beats Paper!`;
+        return `${playerWin} Scissors beats Paper!` + ` Player Score: ${playerScore} `;
     } else if (playerSelection == 'scissors' && computerSelection == 'rock') {
         return `${compWin} Rock beats Scissors!`;
     } else if (playerSelection == ' ' && computerSelection == 'rock' || 'paper' || 'scissors') {
