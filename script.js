@@ -7,7 +7,7 @@ let computerPlay = function() {
 };
 
 // variables
-const typedPlayerSelection = 'rock';
+const typedPlayerSelection = 'paper';
 const playerSelection = typedPlayerSelection.toLowerCase();
 let computerSelection = computerPlay();
 const playerWin = 'You Win!';
@@ -30,11 +30,9 @@ let playRound = function(playerSelection, computerSelection) {
         return `${playerWin} Scissors beats Paper!` + ' Player Score: ' + ++playerScore;
     } else if (playerSelection == 'scissors' && computerSelection == 'rock') {
         return `${compWin} Rock beats Scissors!` + ' Computer Score: ' + ++compScore;
-    } else if (playerSelection ===  computerSelection) {
-        return 'Draw!'
-    } else {
-        return 'Let\'s Play!'
-    }
+    } else if (playerSelection == computerSelection) {
+        return 'Draw!' 
+    } 
 
  };
 
@@ -47,7 +45,7 @@ const game = function() {
 
     console.log(playRound(playerSelection, computerSelection));
     
-
+   
 }
 
 game();
