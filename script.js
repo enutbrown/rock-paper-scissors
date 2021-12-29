@@ -7,13 +7,14 @@ let computerPlay = function() {
 };
 
 // variables
-const typedPlayerSelection = 'paper';
+const typedPlayerSelection = prompt('Rock, Paper or Scissors?');
 const playerSelection = typedPlayerSelection.toLowerCase();
 let computerSelection = computerPlay();
 const playerWin = 'You Win!';
 const compWin = 'You Lose!'
 let playerScore = 0;
 let compScore = 0;
+
 
 
 //plays one round of rock paper scissors, outputs who wins
@@ -32,7 +33,9 @@ let playRound = function(playerSelection, computerSelection) {
         return `${compWin} Rock beats Scissors!` + ' Computer Score: ' + ++compScore;
     } else if (playerSelection == computerSelection) {
         return 'Draw!' 
-    } 
+    } else {
+        return 'I do not understand.'
+    }
 
  };
 
