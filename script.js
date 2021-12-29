@@ -1,4 +1,3 @@
-
 //function where computer returns random option rock, paper, scissors
 let computerPlay = function() {
     let options = [['rock'], ['paper'], ['scissors']]
