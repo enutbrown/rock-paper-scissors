@@ -19,31 +19,35 @@ let compScore = 0;
 //plays one round of rock paper scissors, outputs who wins
 let playRound = function(playerSelection, computerSelection) {
     if (playerSelection == 'rock' && computerSelection == 'scissors') {
-        return `${playerWin} Rock beats Scissors!` + ++playerScore + ` Player Score: ${playerScore} `;
+        return `${playerWin} Rock beats Scissors!` + ' Player Score: ' + playerScore++;
     } else if (playerSelection == 'rock' && computerSelection == 'paper') {
-        return `${compWin} Paper beats Rock!` + ++compScore + ` Computer Score: ${compScore} `;
+        return `${compWin} Paper beats Rock!` + ' Computer Score: ' + compScore++;
     } else if (playerSelection == 'paper' && computerSelection == 'rock') {
-        return `${playerWin} Paper beats Rock!` + ++playerScore + ` Player Score: ${playerScore} `;
+        return `${playerWin} Paper beats Rock!` + ' Player Score: ' + playerScore++;
     } else if (playerSelection == 'paper' && computerSelection == 'scissors') {
-        return `${compWin} Scissors beats Paper!` + ++compScore + ` Computer Score: ${compScore} `;
+        return `${compWin} Scissors beats Paper!` + ' Computer Score: ' + compScore++;
     } else if (playerSelection == 'scissors' && computerSelection == 'paper') {
-        return `${playerWin} Scissors beats Paper!` + ++playerScore + ` Player Score: ${playerScore} `;
+        return `${playerWin} Scissors beats Paper!` + ' Player Score: ' + playerScore++;
     } else if (playerSelection == 'scissors' && computerSelection == 'rock') {
-        return `${compWin} Rock beats Scissors!` + ++compScore + ` Computer Score: ${compScore} `;
+        return `${compWin} Rock beats Scissors!` + ' Computer Score: ' + compScore++;
     } else if (playerSelection == ' ' && computerSelection == 'rock' || 'paper' || 'scissors') {
         return 'Let\'s Play';
     } else if (playerSelection ===  computerSelection) {
         return 'Draw!'
     }
+
+    let turn;
+    return turn++;
  };
 
  //function to play the game 5 times
 const game = function() {
     console.log(playRound(playerSelection, computerSelection));
-    console.log(playRound(playerSelection, computerSelection));
-    console.log(playRound(playerSelection, computerSelection));
-    console.log(playRound(playerSelection, computerSelection));
-    console.log(playRound(playerSelection, computerSelection));
+  
 };
 
+game();
+game();
+game();
+game();
 game();
