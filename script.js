@@ -44,8 +44,6 @@ const game = function() {
     const playerSelection = typedPlayerSelection.toLowerCase();
 
     console.log(playRound(playerSelection, computerSelection));
-    
-   
 }
 
 game();
@@ -53,3 +51,10 @@ game();
 game();
 game();
 game();
+
+// Output to declare winner
+if (playerScore > compScore) {
+    console.log('Congratulations! You win!');
+} else if (compScore > playerScore) {
+    console.log('Computer Wins! Let\'s play again!');
+}
