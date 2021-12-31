@@ -6,13 +6,14 @@ function computerPlay() {
 }
 
 // variables
-let typedPlayerSelection = 'rock' || 'paper' || 'scissors'
-let playerSelection = typedPlayerSelection.toLowerCase();
+const typedPlayerSelection = 'rock' || 'paper' || 'scissors'
+const playerSelection = typedPlayerSelection.toLowerCase();
 let computerSelection = computerPlay();
 const playerWin = 'You Win!';
 const compWin = 'You Lose!'
-playerScore = 0;
-compScore = 0;
+let playerScore = 0;
+let compScore = 0;
+let round = 1;
 
 
 
