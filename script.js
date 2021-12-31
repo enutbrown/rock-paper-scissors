@@ -16,7 +16,6 @@ let compScore = 0;
 let round = 6;
 
 
-
 //plays one round of rock paper scissors, outputs who wins
 function playRound(playerSelection, computerSelection) {
     
@@ -38,8 +37,7 @@ function playRound(playerSelection, computerSelection) {
     } else {
         return 'I do not understand.'
     }
-
- }
+}
 
  //function to play the game 5 times
 function game() {
@@ -49,6 +47,13 @@ function game() {
     //plays game for 5 rounds
     if(round < 5) {
         let playerSelection = prompt('Please select Rock, Paper, or Scissors')
+    
+        let computerSelection = computerPlay();
+        let gameResult = playRound(playerSelection, computerSelection)
+
+        if(gameResult == `${playerWin}`) {
+            playerScore++ round++;
+        } else if(gameResult == `${compWin}`)
     }
 
         // Output to declare winner
