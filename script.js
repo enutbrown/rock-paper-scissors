@@ -13,7 +13,7 @@ const playerWin = 'You Win!';
 const compWin = 'You Lose!'
 let playerScore = 0;
 let compScore = 0;
-let round = 1;
+let round = 6;
 
 
 
@@ -46,22 +46,17 @@ function game() {
     let playerScore = 0;
     let compScore = 0;
   
+    //plays game for 5 rounds
+    if(round < 5) {
+        let playerSelection = prompt('Please select Rock, Paper, or Scissors')
+    }
 
-
-    // Output to declare winner
-if (playerScore > compScore) {
-    console.log('Congratulations! You win!');
-} else if (compScore > playerScore) {
-    console.log('Computer Wins! Let\'s play again!');
+        // Output to declare winner
+    if (playerScore > compScore) {
+        console.log('Congratulations! You win!');
+    } else if (compScore > playerScore) {
+        console.log('Computer Wins! Let\'s play again!');
+    }
 }
-}
-
-game();
-game();
-game();
-game();
-game();
 
 
-
-console.log(playRound(playerSelection, computerSelection));
