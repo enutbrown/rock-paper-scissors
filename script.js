@@ -3,15 +3,17 @@ function computerPlay() {
     let options = [['rock'], ['paper'], ['scissors']]
     let random = options[Math.floor(Math.random()*options.length)];
     return random;
-};
+}
 
 // variables
-const playerSelection = playerSelection.toLowerCase();
+let typedPlayerSelection = 'rock' || 'paper' || 'scissors'
+let playerSelection = typedPlayerSelection.toLowerCase();
 let computerSelection = computerPlay();
 const playerWin = 'You Win!';
 const compWin = 'You Lose!'
-//let playerScore = 0;
-//let compScore = 0;
+playerScore = 0;
+compScore = 0;
+
 
 
 //plays one round of rock paper scissors, outputs who wins
@@ -36,24 +38,29 @@ function playRound(playerSelection, computerSelection) {
         return 'I do not understand.'
     }
 
- };
+ }
 
  //function to play the game 5 times
 function game() {
     let playerScore = 0;
     let compScore = 0;
   
-}
 
-game();
-game();
-game();
-game();
-game();
 
-// Output to declare winner
+    // Output to declare winner
 if (playerScore > compScore) {
     console.log('Congratulations! You win!');
 } else if (compScore > playerScore) {
     console.log('Computer Wins! Let\'s play again!');
 }
+}
+
+game();
+game();
+game();
+game();
+game();
+
+
+
+console.log(playRound(playerSelection, computerSelection));
