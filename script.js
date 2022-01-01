@@ -50,16 +50,14 @@ function game() {
     const playerSelection = typedPlayerSelection.toLowerCase();
     let computerSelection = computerPlay();
     let gameResult = playRound(playerSelection, computerSelection)
-    let moves = 0;
+    
 
     //plays game until winner has 5 points
     if (playerScore || compScore !== 5) {
         if (gameResult == `${playerWin} Rock beats Scissors!` + ' Player Score: ' + `${playerScore}`) {
             playerScore++;
-            moves++;
         } if (gameResult == `${compWin} Paper beats Rock!` + ' Computer Score: ' + `${compScore}`) {
             compScore++;
-            moves++;
         } else if (gameResult == 'Draw!') {
             playerScore = 0;
             compScore = 0;
