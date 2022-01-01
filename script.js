@@ -52,6 +52,14 @@ function game() {
             playerScore++;
         } if (gameResult == `${compWin} Paper beats Rock!` + ' Computer Score: ' + `${compScore}`) {
             compScore++;
+        } if (gameResult == `${playerWin} Paper beats Rock!` + ' Player Score: ' + `${playerScore}`) {
+            playerScore++;
+        } if (gameResult == `${compWin} Scissors beats Paper!` + ' Computer Score: ' + `${compScore}`) {
+            compScore++;
+        } if (gameResult == `${playerWin} Scissors beats Paper!` + ' Player Score: ' + `${playerScore}`) {
+            playerScore++;
+        } if (gameResult == `${compWin} Rock beats Scissors!` + ' Computer Score: ' + `${compScore}`) {
+            compScore++;
         }
     }
 
@@ -69,7 +77,7 @@ game();
 game();
 
 if (playerScore > compScore) {
-    console.log('Congratulations! You win!');               //first try
+    console.log('Congratulations! You win!');               
 } else if (compScore > playerScore) {
     console.log('Computer Wins! Let\'s play again!');
 }
