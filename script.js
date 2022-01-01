@@ -40,7 +40,7 @@ let compScore = 0
 
 //function to play the game 
 function game() {
-    const typedPlayerSelection = prompt('Please select Rock, Paper, or Scissors')
+    const typedPlayerSelection = prompt('Please select Rock, Paper, or Scissors', 'rock')
     const playerSelection = typedPlayerSelection.toLowerCase();
     let computerSelection = computerPlay();
     let gameResult = playRound(playerSelection, computerSelection)
@@ -52,14 +52,13 @@ function game() {
             playerScore++;
         } if (gameResult == `${compWin} Paper beats Rock!` + ' Computer Score: ' + `${compScore}`) {
             compScore++;
-        } else if (gameResult == 'Draw!') {
-            playerScore = 0;
-            compScore = 0;
         }
     }
 
     console.log(playRound(playerSelection, computerSelection));
     
+    let gameScore = `Your Score: ${playerScore} - Computer Score: ${compScore}`;
+    console.log(gameScore);
     
     // Output to declare winner
     
@@ -89,5 +88,5 @@ game();
 game();
 game();
 
-let gameScore = `Your Score: ${playerScore} - Computer Score: ${compScore}`;
-    console.log(gameScore);
+//let gameScore = `Your Score: ${playerScore} - Computer Score: ${compScore}`;
+  //  console.log(gameScore);
