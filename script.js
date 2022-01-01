@@ -59,27 +59,6 @@ function game() {
     
     let gameScore = `Your Score: ${playerScore} - Computer Score: ${compScore}`;
     console.log(gameScore);
-
-    
-    // Output to declare winner
-    
-    /* switch (true) {
-        case playerScore == 5:
-            console.log('Congratulations! You win!');
-            break;
-        case compScore == 5:                                    //second try
-            console.log('Computer Wins! Let\'s Play again!')
-            break;
-        default:
-            playRound(playerSelection, computerSelection);
-    }
-
-    
-    if (playerScore > compScore) {
-        console.log('Congratulations! You win!');               //first try
-    } else if (compScore > playerScore) {
-        console.log('Computer Wins! Let\'s play again!');
-    } */
 }
 
 
@@ -94,6 +73,3 @@ if (playerScore > compScore) {
 } else if (compScore > playerScore) {
     console.log('Computer Wins! Let\'s play again!');
 }
-
-//let gameScore = `Your Score: ${playerScore} - Computer Score: ${compScore}`;
-  //  console.log(gameScore);
