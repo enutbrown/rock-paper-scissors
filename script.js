@@ -16,9 +16,7 @@ const compWin = 'You Lose!'
 
 //plays one round of rock paper scissors, outputs who wins
 function playRound(playerSelection, computerSelection) {
-    if (typedPlayerSelection == null || typedPlayerSelection == undefined) {
-        return 'I do not understand';
-    } else if (playerSelection == 'rock' && computerSelection == 'scissors') {
+    if (playerSelection == 'rock' && computerSelection == 'scissors') {
         return `${playerWin} Rock beats Scissors!` + ' Player Score: ' + `${playerScore}`;
     } else if (playerSelection == 'rock' && computerSelection == 'paper') {
         return `${compWin} Paper beats Rock!` + ' Computer Score: ' + `${compScore}`;
@@ -32,6 +30,8 @@ function playRound(playerSelection, computerSelection) {
         return `${compWin} Rock beats Scissors!` + ' Computer Score: ' + `${compScore}`;
     } else if (playerSelection == computerSelection) {
         return 'Draw!'
+    } else {
+        return 'I do not understand.'
     }
 }
 
@@ -40,7 +40,7 @@ let compScore = 0
 
 //function to play the game 
 function game() {
-    const typedPlayerSelection = prompt('Please select Rock, Paper, or Scissors', 'rock')
+    const typedPlayerSelection = prompt('Please select Rock, Paper, or Scissors')
     const playerSelection = typedPlayerSelection.toLowerCase();
     let computerSelection = computerPlay();
     let gameResult = playRound(playerSelection, computerSelection)
