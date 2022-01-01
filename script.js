@@ -46,7 +46,7 @@ function game() {
     let gameResult = playRound(playerSelection, computerSelection)
     
 
-    //plays game until winner has 5 points
+    //plays game and tracks points
     if (playerScore !==5 || compScore !== 5) {
         if (gameResult == `${playerWin} Rock beats Scissors!` + ' Player Score: ' + `${playerScore}`) {
             playerScore++;
@@ -63,10 +63,10 @@ function game() {
         }
     }
 
-    console.log(playRound(playerSelection, computerSelection));
+    console.log(playRound(playerSelection, computerSelection));  //outputs round result to console
     
     let gameScore = `Your Score: ${playerScore} - Computer Score: ${compScore}`;
-    console.log(gameScore);
+    console.log(gameScore);                        //tracks score
 }
 
 
@@ -76,6 +76,7 @@ game();
 game();
 game();
 
+// output to declare winner
 if (playerScore > compScore) {
     console.log('Congratulations! You win!');               
 } else if (compScore > playerScore) {
