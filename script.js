@@ -1,7 +1,11 @@
 //function where computer returns random option rock, paper, scissors
 function computerPlay() {
-    let options = [['rock'], ['paper'], ['scissors']]
-    let random = options[Math.floor(Math.random()*options.length)];
+    let options = [
+        ['rock'],
+        ['paper'],
+        ['scissors']
+    ]
+    let random = options[Math.floor(Math.random() * options.length)];
     return random;
 }
 
@@ -18,9 +22,7 @@ const compWin = 'You Lose!'
 
 //plays one round of rock paper scissors, outputs who wins
 function playRound(playerSelection, computerSelection) {
-    if (playerSelection = null || undefined) {
-        return 'You did not choose a weapon'
-    }else if (playerSelection == 'rock' && computerSelection == 'scissors') {
+    if (playerSelection == 'rock' && computerSelection == 'scissors') {
         return `${playerWin} Rock beats Scissors!` + ' Player Score: ' + ++playerScore;
     } else if (playerSelection == 'rock' && computerSelection == 'paper') {
         return `${compWin} Paper beats Rock!` + ' Computer Score: ' + ++compScore;
@@ -33,7 +35,7 @@ function playRound(playerSelection, computerSelection) {
     } else if (playerSelection == 'scissors' && computerSelection == 'rock') {
         return `${compWin} Rock beats Scissors!` + ' Computer Score: ' + ++compScore;
     } else if (playerSelection == computerSelection) {
-        return 'Draw!' 
+        return 'Draw!'
     } else {
         return 'I do not understand.'
     }
@@ -42,33 +44,35 @@ function playRound(playerSelection, computerSelection) {
 let playerScore = 0;
 let compScore = 0
 
- //function to play the game until winner
+//function to play the game until winner
 function game() {
     const typedPlayerSelection = prompt('Please select Rock, Paper, or Scissors')
     const playerSelection = typedPlayerSelection.toLowerCase();
     let computerSelection = computerPlay();
-  
-    //plays game for 5 rounds
-    if(playerScore || compScore !== 5) {
-        let computerSelection = computerPlay();
-        let gameResult = playRound(playerSelection, computerSelection)
+    let gameResult = playRound(playerSelection, computerSelection)
 
-        if(gameResult == `${playerWin} Rock beats Scissors!` + ' Player Score: ' + ++playerScore) {
-            moves++;
-        } else if(gameResult == `${compWin} Paper beats Rock!` + ' Computer Score: ' + ++compScore) {
-            moves++
+    //plays game until winner has 5 points
+    if (playerScore || compScore !== 5) {
+        if (gameResult == `${playerWin} Rock beats Scissors!` + ' Player Score: ' + ++playerScore) {
+            playerScore++;
+        } else if (gameResult == `${compWin} Paper beats Rock!` + ' Computer Score: ' + ++compScore) {
+            compScore++;
         }
     }
 
-        console.log(playRound(playerSelection, computerSelection));
-
-        // Output to declare winner
+    console.log(playRound(playerSelection, computerSelection));
+    
+    // Output to declare winner
     if (playerScore = 5) {
         console.log('Congratulations! You win!');
-    } else if (compScore =5) {
+    } else if (compScore = 5) {
         console.log('Computer Wins! Let\'s play again!');
     }
 }
 
 
+game();
+game();
+game();
+game();
 game();
