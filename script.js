@@ -23,17 +23,17 @@ const compWin = 'You Lose!'
 //plays one round of rock paper scissors, outputs who wins
 function playRound(playerSelection, computerSelection) {
     if (playerSelection == 'rock' && computerSelection == 'scissors') {
-        return `${playerWin} Rock beats Scissors!` + ' Player Score: ' + ++playerScore;
+        return `${playerWin} Rock beats Scissors!` + ' Player Score: ' + `${playerScore}`;
     } else if (playerSelection == 'rock' && computerSelection == 'paper') {
-        return `${compWin} Paper beats Rock!` + ' Computer Score: ' + ++compScore;
+        return `${compWin} Paper beats Rock!` + ' Computer Score: ' + `${compScore}`
     } else if (playerSelection == 'paper' && computerSelection == 'rock') {
-        return `${playerWin} Paper beats Rock!` + ' Player Score: ' + ++playerScore;
+        return `${playerWin} Paper beats Rock!` + ' Player Score: ' + `${playerScore}`;
     } else if (playerSelection == 'paper' && computerSelection == 'scissors') {
-        return `${compWin} Scissors beats Paper!` + ' Computer Score: ' + ++compScore;
+        return `${compWin} Scissors beats Paper!` + ' Computer Score: ' + `${compScore}`
     } else if (playerSelection == 'scissors' && computerSelection == 'paper') {
-        return `${playerWin} Scissors beats Paper!` + ' Player Score: ' + ++playerScore;
+        return `${playerWin} Scissors beats Paper!` + ' Player Score: ' + `${playerScore}`;
     } else if (playerSelection == 'scissors' && computerSelection == 'rock') {
-        return `${compWin} Rock beats Scissors!` + ' Computer Score: ' + ++compScore;
+        return `${compWin} Rock beats Scissors!` + ' Computer Score: ' + `${compScore}`
     } else if (playerSelection == computerSelection) {
         return 'Draw!'
     } else {
@@ -53,10 +53,13 @@ function game() {
 
     //plays game until winner has 5 points
     if (playerScore || compScore !== 5) {
-        if (gameResult == `${playerWin} Rock beats Scissors!` + ' Player Score: ' + ++playerScore) {
+        if (gameResult == `${playerWin} Rock beats Scissors!` + ' Player Score: ' + `${playerScore}`) {
             playerScore++;
-        } else if (gameResult == `${compWin} Paper beats Rock!` + ' Computer Score: ' + ++compScore) {
+        } if (gameResult == `${compWin} Paper beats Rock!` + ' Computer Score: ' + `${compScore}`) {
             compScore++;
+        } else if (gameResult == 'Draw!') {
+            playerScore = 0;
+            compScore = 0;
         }
     }
 
