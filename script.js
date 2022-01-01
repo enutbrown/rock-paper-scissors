@@ -44,8 +44,9 @@ let compScore = 0
 
  //function to play the game until winner
 function game() {
-    let playerScore = 0;
-    let compScore = 0;
+    const typedPlayerSelection = prompt('Please select Rock, Paper, or Scissors')
+    const playerSelection = typedPlayerSelection.toLowerCase();
+    let computerSelection = computerPlay();
   
     //plays game for 5 rounds
     if(playerScore || compScore !== 5) {
