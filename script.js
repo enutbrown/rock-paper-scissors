@@ -61,9 +61,9 @@ function game() {
         console.log(playRound(playerSelection, computerSelection));
 
         // Output to declare winner
-    if (playerScore > compScore) {
+    if (playerScore = 5) {
         console.log('Congratulations! You win!');
-    } else if (compScore > playerScore) {
+    } else if (compScore =5) {
         console.log('Computer Wins! Let\'s play again!');
     }
 }
