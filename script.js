@@ -38,7 +38,7 @@ function playRound(playerSelection, computerSelection) {
 let playerScore = 0;
 let compScore = 0
 
-//function to play the game until winner
+//function to play the game 
 function game() {
     const typedPlayerSelection = prompt('Please select Rock, Paper, or Scissors')
     const playerSelection = typedPlayerSelection.toLowerCase();
@@ -47,7 +47,7 @@ function game() {
     
 
     //plays game until winner has 5 points
-    if (playerScore || compScore !== 5) {
+    if (playerScore !==5 || compScore !== 5) {
         if (gameResult == `${playerWin} Rock beats Scissors!` + ' Player Score: ' + `${playerScore}`) {
             playerScore++;
         } if (gameResult == `${compWin} Paper beats Rock!` + ' Computer Score: ' + `${compScore}`) {
@@ -62,20 +62,21 @@ function game() {
     
     
     // Output to declare winner
-    switch (true) {
+    
+    /* switch (true) {
         case playerScore == 5:
             console.log('Congratulations! You win!');
             break;
-        case compScore == 5:
+        case compScore == 5:                                    //second try
             console.log('Computer Wins! Let\'s Play again!')
             break;
         default:
             playRound(playerSelection, computerSelection);
     }
 
-    /*
+    
     if (playerScore = 5) {
-        console.log('Congratulations! You win!');
+        console.log('Congratulations! You win!');               //first try
     } else if (compScore = 5) {
         console.log('Computer Wins! Let\'s play again!');
     } */
