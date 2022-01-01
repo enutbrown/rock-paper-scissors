@@ -39,6 +39,9 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
+let playerScore = 0;
+let compScore = 0
+
  //function to play the game until winner
 function game() {
     let playerScore = 0;
