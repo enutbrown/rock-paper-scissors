@@ -10,14 +10,8 @@ function computerPlay() {
 }
 
 // variables
-//const typedPlayerSelection = prompt('Please select Rock, Paper, or Scissors')
-//const playerSelection = typedPlayerSelection.toLowerCase();
-//let computerSelection = computerPlay();
 const playerWin = 'You Win!';
 const compWin = 'You Lose!'
-//let playerScore = 0;
-//let compScore = 0;
-//let moves = 1;
 
 
 //plays one round of rock paper scissors, outputs who wins
