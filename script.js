@@ -6,21 +6,21 @@ function computerPlay() {
 }
 
 // variables
-const typedPlayerSelection = prompt('Please select Rock, Paper, or Scissors')
-const playerSelection = typedPlayerSelection.toLowerCase();
-let computerSelection = computerPlay();
+//const typedPlayerSelection = prompt('Please select Rock, Paper, or Scissors')
+//const playerSelection = typedPlayerSelection.toLowerCase();
+//let computerSelection = computerPlay();
 const playerWin = 'You Win!';
 const compWin = 'You Lose!'
-let playerScore = 0;
-let compScore = 0;
-let moves = 1;
+//let playerScore = 0;
+//let compScore = 0;
+//let moves = 1;
 
 
 //plays one round of rock paper scissors, outputs who wins
 function playRound(playerSelection, computerSelection) {
-    
-
-    if (playerSelection == 'rock' && computerSelection == 'scissors') {
+    if (playerSelection = null || undefined) {
+        return 'You did not choose a weapon'
+    }else if (playerSelection == 'rock' && computerSelection == 'scissors') {
         return `${playerWin} Rock beats Scissors!` + ' Player Score: ' + ++playerScore;
     } else if (playerSelection == 'rock' && computerSelection == 'paper') {
         return `${compWin} Paper beats Rock!` + ' Computer Score: ' + ++compScore;
@@ -39,21 +39,19 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
- //function to play the game 5 times
+ //function to play the game until winner
 function game() {
     let playerScore = 0;
     let compScore = 0;
   
     //plays game for 5 rounds
-    if(moves < 5) {
-        let playerSelection = prompt('Please select Rock, Paper, or Scissors')
-    
+    if(playerScore || compScore !== 5) {
         let computerSelection = computerPlay();
         let gameResult = playRound(playerSelection, computerSelection)
 
-        if(gameResult == `${playerWin}`) {
+        if(gameResult == `${playerWin} Rock beats Scissors!` + ' Player Score: ' + ++playerScore) {
             moves++;
-        } else if(gameResult == `${compWin}`) {
+        } else if(gameResult == `${compWin} Paper beats Rock!` + ' Computer Score: ' + ++compScore) {
             moves++
         }
     }
@@ -69,3 +67,4 @@ function game() {
 }
 
 
+game();
