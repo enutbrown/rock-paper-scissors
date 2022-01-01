@@ -59,6 +59,7 @@ function game() {
     
     let gameScore = `Your Score: ${playerScore} - Computer Score: ${compScore}`;
     console.log(gameScore);
+
     
     // Output to declare winner
     
@@ -74,9 +75,9 @@ function game() {
     }
 
     
-    if (playerScore = 5) {
+    if (playerScore > compScore) {
         console.log('Congratulations! You win!');               //first try
-    } else if (compScore = 5) {
+    } else if (compScore > playerScore) {
         console.log('Computer Wins! Let\'s play again!');
     } */
 }
@@ -87,6 +88,12 @@ game();
 game();
 game();
 game();
+
+if (playerScore > compScore) {
+    console.log('Congratulations! You win!');               //first try
+} else if (compScore > playerScore) {
+    console.log('Computer Wins! Let\'s play again!');
+}
 
 //let gameScore = `Your Score: ${playerScore} - Computer Score: ${compScore}`;
   //  console.log(gameScore);
