@@ -6,14 +6,14 @@ function computerPlay() {
 }
 
 // variables
-const typedPlayerSelection = 'rock' || 'paper' || 'scissors'
+const typedPlayerSelection = prompt('Please select Rock, Paper, or Scissors')
 const playerSelection = typedPlayerSelection.toLowerCase();
 let computerSelection = computerPlay();
 const playerWin = 'You Win!';
 const compWin = 'You Lose!'
 let playerScore = 0;
 let compScore = 0;
-let round = 6;
+let moves = 1;
 
 
 //plays one round of rock paper scissors, outputs who wins
@@ -45,16 +45,20 @@ function game() {
     let compScore = 0;
   
     //plays game for 5 rounds
-    if(round < 5) {
+    if(moves < 5) {
         let playerSelection = prompt('Please select Rock, Paper, or Scissors')
     
         let computerSelection = computerPlay();
         let gameResult = playRound(playerSelection, computerSelection)
 
         if(gameResult == `${playerWin}`) {
-            playerScore++ round++;
-        } else if(gameResult == `${compWin}`)
+            moves++;
+        } else if(gameResult == `${compWin}`) {
+            moves++
+        }
     }
+
+        console.log(playRound(playerSelection, computerSelection));
 
         // Output to declare winner
     if (playerScore > compScore) {
