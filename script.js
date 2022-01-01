@@ -25,15 +25,15 @@ function playRound(playerSelection, computerSelection) {
     if (playerSelection == 'rock' && computerSelection == 'scissors') {
         return `${playerWin} Rock beats Scissors!` + ' Player Score: ' + `${playerScore}`;
     } else if (playerSelection == 'rock' && computerSelection == 'paper') {
-        return `${compWin} Paper beats Rock!` + ' Computer Score: ' + `${compScore}`
+        return `${compWin} Paper beats Rock!` + ' Computer Score: ' + `${compScore}`;
     } else if (playerSelection == 'paper' && computerSelection == 'rock') {
         return `${playerWin} Paper beats Rock!` + ' Player Score: ' + `${playerScore}`;
     } else if (playerSelection == 'paper' && computerSelection == 'scissors') {
-        return `${compWin} Scissors beats Paper!` + ' Computer Score: ' + `${compScore}`
+        return `${compWin} Scissors beats Paper!` + ' Computer Score: ' + `${compScore}`;
     } else if (playerSelection == 'scissors' && computerSelection == 'paper') {
         return `${playerWin} Scissors beats Paper!` + ' Player Score: ' + `${playerScore}`;
     } else if (playerSelection == 'scissors' && computerSelection == 'rock') {
-        return `${compWin} Rock beats Scissors!` + ' Computer Score: ' + `${compScore}`
+        return `${compWin} Rock beats Scissors!` + ' Computer Score: ' + `${compScore}`;
     } else if (playerSelection == computerSelection) {
         return 'Draw!'
     } else {
@@ -50,13 +50,16 @@ function game() {
     const playerSelection = typedPlayerSelection.toLowerCase();
     let computerSelection = computerPlay();
     let gameResult = playRound(playerSelection, computerSelection)
+    let moves = 0;
 
     //plays game until winner has 5 points
     if (playerScore || compScore !== 5) {
         if (gameResult == `${playerWin} Rock beats Scissors!` + ' Player Score: ' + `${playerScore}`) {
             playerScore++;
+            moves++;
         } if (gameResult == `${compWin} Paper beats Rock!` + ' Computer Score: ' + `${compScore}`) {
             compScore++;
+            moves++;
         } else if (gameResult == 'Draw!') {
             playerScore = 0;
             compScore = 0;
@@ -65,12 +68,25 @@ function game() {
 
     console.log(playRound(playerSelection, computerSelection));
     
+    
     // Output to declare winner
+    switch (true) {
+        case playerScore == 5:
+            console.log('Congratulations! You win!');
+            break;
+        case compScore == 5:
+            console.log('Computer Wins! Let\'s Play again!')
+            break;
+        default:
+            playRound(playerSelection, computerSelection);
+    }
+
+    /*
     if (playerScore = 5) {
         console.log('Congratulations! You win!');
     } else if (compScore = 5) {
         console.log('Computer Wins! Let\'s play again!');
-    }
+    } */
 }
 
 
@@ -79,3 +95,6 @@ game();
 game();
 game();
 game();
+
+let gameScore = `Your Score: ${playerScore} - Computer Score: ${compScore}`;
+    console.log(gameScore);
