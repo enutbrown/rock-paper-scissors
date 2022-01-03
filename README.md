@@ -8,3 +8,8 @@ During this project I:
 - stepped away from my code when it was frustrating, and the answers would come to me
 - learned how to break down the problem and solve it in pieces
 - Googled, ALOT!
+
+- This version only plays within console, no GUI.
+
+Project:
+https://www.theodinproject.com/paths/foundations/courses/foundations/lessons/rock-paper-scissors
