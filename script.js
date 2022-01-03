@@ -31,10 +31,11 @@ function playRound(playerSelection, computerSelection) {
     } else if (playerSelection == computerSelection) {
         return 'Draw!'
     } else {
-        return 'I do not understand.'
+        return 'Game Over'
     }
 }
 
+//variables to keep score
 let playerScore = 0;
 let compScore = 0
 
@@ -63,10 +64,12 @@ function game() {
         }
     }
 
-    console.log(playRound(playerSelection, computerSelection));  //outputs round result to console
-    
+    //outputs round result to console
+    console.log(playRound(playerSelection, computerSelection));  
+
+    //tracks score
     let gameScore = `Your Score: ${playerScore} - Computer Score: ${compScore}`;
-    console.log(gameScore);                        //tracks score
+    console.log(gameScore);                        
 }
 
 
