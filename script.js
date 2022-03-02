@@ -1,3 +1,6 @@
+const buttons = document.querySelectorAll('button')
+
+
 //function where computer returns random option rock, paper, scissors
 function computerPlay() {
     let options = [
@@ -39,6 +42,7 @@ function playRound(playerSelection, computerSelection) {
 let playerScore = 0;
 let compScore = 0
 
+/*
 //function to play the game 
 function game() {
     const typedPlayerSelection = prompt('Please select Rock, Paper, or Scissors', 'rock')
@@ -64,13 +68,14 @@ function game() {
         }
     }
 
+    */
     //outputs round result to console
     console.log(playRound(playerSelection, computerSelection));  
 
     //tracks score
     let gameScore = `Your Score: ${playerScore} - Computer Score: ${compScore}`;
     console.log(gameScore);                        
-}
+// }
 
 
 game();
@@ -85,3 +90,4 @@ if (playerScore > compScore) {
 } else if (compScore > playerScore) {
     console.log('Computer Wins! Let\'s play again!');
 }
+
